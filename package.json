@@ -1,0 +1,61 @@
+{
+   "name": "bamiki-backend",
+   "version": "1.0.0",
+   "description": "Bamiki backend ",
+   "main": "src/index.ts",
+   "scripts": {
+      "test": "jest",
+      "start": "ts-node src/index.ts",
+      "prestart": "npm run typeorm migration:run",
+      "dev": "nodemon --exec ts-node src/index.ts",
+      "lint": "npx eslint . --fix --ext .ts",
+      "typeorm": "ts-node  ./node_modules/typeorm/cli.js"
+   },
+   "keywords": [
+      "attenvo",
+      "backend"
+   ],
+   "author": "bemijonathan",
+   "license": "ISC",
+   "pre-commit": [
+      "test",
+      "lint"
+   ],
+   "dependencies": {
+      "@types/aws-sdk": "^2.7.0",
+      "@types/helmet": "^4.0.0",
+      "@types/multer": "^1.4.7",
+      "aws-sdk": "^2.968.0",
+      "bcrypt": "^5.0.1",
+      "body-parser": "^1.19.0",
+      "celebrate": "^15.0.0",
+      "dotenv": "^8.6.0",
+      "express": "^4.17.1",
+      "helmet": "^4.6.0",
+      "joi": "^17.4.2",
+      "jsonwebtoken": "^8.5.1",
+      "multer": "^1.4.3",
+      "pg": "^8.7.1",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.2.33",
+      "ts-node": "3.3.0",
+      "typescript": "^3.3.3333"
+   },
+   "devDependencies": {
+      "@types/bcrypt": "^5.0.0",
+      "@types/body-parser": "^1.19.1",
+      "@types/dotenv": "^8.2.0",
+      "@types/express": "^4.17.13",
+      "@types/jest": "^26.0.24",
+      "@types/joi": "^17.2.3",
+      "@types/jsonwebtoken": "^8.5.4",
+      "@types/node": "^8.0.29",
+      "@types/supertest": "^2.0.11",
+      "@typescript-eslint/eslint-plugin": "^4.29.1",
+      "@typescript-eslint/parser": "^4.29.1",
+      "eslint": "^7.32.0",
+      "pre-commit": "^1.2.2",
+      "supertest": "^6.1.5",
+      "ts-jest": "^27.0.4"
+   }
+}
